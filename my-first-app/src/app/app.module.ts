@@ -6,12 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { TestBindingComponent } from './test-binding/test-binding.component';
+import { TestAssignmentThirdComponent } from './test-assignment-third/test-assignment-third.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent
+    ServersComponent,
+    TestBindingComponent,
+    TestAssignmentThirdComponent
   ],
   imports: [
     BrowserModule,
