@@ -1,39 +1,15 @@
-<!-- <div class="container bg-danger">    
-  <div class="text-center">           
-      <div class="col-lg-6">
-        <h2 >Password show / hide click</h2> 
-        <div class="input-group" >
-            <input class="form-control pwd" appPasswordShow>
-            <span class="input-group-btn">
-              <button class="btn btn-default reveal" type="button" (click)="onClickMe()"><i class="glyphicon glyphicon-eye-open bg-dark"></i></button>
-            </span>
-          <input   type="{{isPassword ? 'password' : 'text' }}">
-          <button type="btn btn-default reveal" (click)="show()"><i class="glyphicon glyphicon-eye-open bg-dark"></i></button>     
-              
-            
-
-        </div>
-      </div>
-  </div>  
-</div> -->
-
-
 <div class="container bg-danger">    
   <div class="text-center">           
       <div class="col-lg-6">
         <h2 >Password show / hide </h2> 
         <div class="input-group" >
-          <input  placeholder="Enter Password" appPassword>
+          <input  placeholder="Enter Password" [appPassword] = 'isHidden'>
+          <button (clicsk)="isHidden = !isHidden">Show</button>
         </div>
-        <div class="input-group">
-          <input placeholder="Enter Password" appPassword>
-        </div>
+
       </div>
   </div>  
 </div>
 
 
-  
 
-<!-- type="password"  -->
-<!-- type="{{isPassword ? 'password' : 'text' }}" -->

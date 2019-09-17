@@ -1,34 +1,34 @@
-import { Directive, ElementRef, OnInit, Renderer2, HostListener } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Directive({
   selector: '[appPassword]'
 })
-export class AppPasswordDirective implements OnInit{
-  private _shown = false;
+export class AppPasswordDirective implements OnChanges{
+  @Input() appPassword: boolean;
 
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
-
-  ngOnInit(): void {
-    this.renderer.setAttribute(this.el.nativeElement, 'type', 'password') ;
-    const parent = this.el.nativeElement.parentNode;
-    const button = document.createElement('button');
-    button.className = 'password-toggle '
-    button.innerHTML = `Show password`;
-    button.addEventListener('click', () => {
-      this.toggle(button);
-    });
-    parent.appendChild(button);
+  constructor(private el: ElementRef) {
+    // console.log('test');
+    // if (this.appPassword === false ) {
+    //   this.el.nativeElement.setAttribute('type', 'text');
+    //   // button.innerHTML = 'Hide password';
+    // } else {
+    //   this.el.nativeElement.setAttribute('type', 'password');
+    //   // button.innerHTML = 'Show password';
+    // }
   }
-  
-  toggle(button: HTMLElement) {
-    this._shown = !this._shown;
-    if (this._shown ) {
+
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.appPassword === false ) {
       this.el.nativeElement.setAttribute('type', 'text');
-      button.innerHTML = 'Hide password';
+      // button.innerHTML = 'Hide password';
     } else {
       this.el.nativeElement.setAttribute('type', 'password');
-      button.innerHTML = 'Show password';
+      // button.innerHTML = 'Show password';
     }
+    
   }
 
-}
+  }
+ 
+
