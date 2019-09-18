@@ -1,8 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-5">
-      <p>Test</p>
-      <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
+      <p>Loading effect on submit</p>
+      <hr>
+        <button (click)="isStopped = !isStopped" class="ladda-button">Submit</button>
+        <span>&nbsp; &nbsp; </span>
+        <button appAppSubmit [ladda]='isStopped' ></button>
+
     </div>
   </div>
 </div>

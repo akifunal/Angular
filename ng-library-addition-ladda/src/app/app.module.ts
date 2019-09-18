@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { AppSubmitDirective } from './app-submit.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppSubmitDirective
   ],
   imports: [
     BrowserModule
