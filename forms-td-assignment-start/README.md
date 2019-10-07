@@ -6,10 +6,10 @@ Add a Form with the following Inputs (and Validators)
 
 2. A Dropdown which allows the user to select from three different Subscriptions:
 
-    ⋅⋅* "Basic"
-    ⋅⋅* "Advanced"
-    ⋅⋅* "Pro"
-   Set Advanced as Default
+    * "Basic"
+    * "Advanced"
+    * "Pro"
+  - Set Advanced as Default
 3. A Password field (should not be empty)
 
 4. A Submit Button
