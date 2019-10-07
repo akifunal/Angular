@@ -9,7 +9,7 @@ Add a Form with the following Inputs (and Validators)
     * "Basic"
     * "Advanced"
     * "Pro"
-   - ***Set Advanced as Default***
+  - ***Set Advanced as Default***
 3. A Password field (should not be empty)
 
 4. A Submit Button
