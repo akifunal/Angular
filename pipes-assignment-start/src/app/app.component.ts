@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ export class AppComponent {
   appStatus = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve('stable');
-    },2000);
+    }, 2000);
   });
   servers = [
     {
@@ -51,6 +51,6 @@ export class AppComponent {
       name: 'New Server',
       status: 'stable',
       started: new Date(15, 1, 2017)
-    })
+    });
   }
 }
